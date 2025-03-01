@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovAI - Asistente IA</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <!-- <link rel="stylesheet" href="static/general.css"> -->
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <img src="https://static.wixstatic.com/media/e49d68_8265cdd5cda040959e48b66a0339294f~mv2.png/v1/fill/w_226,h_82,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Purple_Modern_Artificial_Intelligence_Technology_Logo-removebg-preview.png" alt="Logo">
+        </div>
+        <div class="nav-links">            
+            <a href="https://wa.me/yourphonenumber">
+                <img src="https://imgs.search.brave.com/6MO2a2yFulDLUEd4RhNRwWa8oO-RhfX1DeBZpm41Nmc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtMDAuaWNvbmR1/Y2suY29tL2Fzc2V0/cy4wMC93aGF0c2Fw/cC1pY29uLTI1Nngy/NTUtMjJnOTA3anQu/cG5n" height="60">
+            </a>
+            <a href="https://oscarsan85.wixsite.com/my-site-1/servicios">Servicios</a>
+            <a href="https://oscarsan85.wixsite.com/my-site-1/programas">Acerca de nosotros</a>
+            <a href="https://oscarsan85.wixsite.com/my-site-1/blog">Blog</a>
+        </div>
+    </nav>
+    <section>
+        
+    </section>
+    <br><br><br><br><br><br><br><br><br>
+    <section class="content-section">
+        <div class="text-box">            
+            <button id="show-embedded-chat">📢 Prueba el chat de un asesor virtual →</button>    
+            <div id="embedded-chat">
+                <iframe 
+                    src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/02/25/22/20250225225642-QA51XMES.json" 
+                    width="100%" 
+                    height="100%" 
+                    style="border: none;">
+                </iframe>
+            </div>            
+        </div>
+        <div class="image-left-box">
+            <img src="https://static.wixstatic.com/media/e49d68_d576377a14054605bcb3fd9a0252cec7~mv2.jpeg/v1/fill/w_679,h_598,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e49d68_d576377a14054605bcb3fd9a0252cec7~mv2.jpeg" alt="Description of Image">
+        </div>
+    </section>
+    <section class="content-section">
+        <div class="image-box">
+            <img src="https://static.wixstatic.com/media/e49d68_3d3fc8d8233e418f87dba6f8fdfd0495~mv2.jpeg/v1/fill/w_679,h_680,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e49d68_3d3fc8d8233e418f87dba6f8fdfd0495~mv2.jpeg" alt="Description of Image">
+        </div>
+        <div class="text-box">            
+            <button id="show-embedded-chat">📢 Habla con un asesor →</button>    
+            <div id="embedded-chat">
+                <iframe 
+                    src="https://elevenlabs.io/app/talk-to?agent_id=kL4ADwSZl28rNoVfslcO" 
+                    width="100%" 
+                    height="100%" 
+                    style="border: none;">
+                </iframe>
+            </div>
+            <elevenlabs-convai agent-id="RMyvfNG5Kjf2fKqlqYLD"></elevenlabs-convai><script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+        </div>        
+    </section>
+    <section class="content-section-n8n">
+        <div class="text-box-n8n">            
+            <div class="chat-container">
+                <h2>Chatea con un asistente</h2>
+                <div class="chat-box" id="chatBox"></div>
+                <div class="input-container">
+                    <input type="text" id="userMessage" placeholder="Escribe tu mensaje...">
+                    <div class="send-button" onclick="sendMessage()" title="Enviar">
+                        <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet">
+                            <title>Enviar</title>
+                            <path fill="currentColor" d="M1.101,21.757L23.8,12.028L1.101,2.3l0.011,7.912l13.623,1.816L1.112,13.845 L1.101,21.757z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>           
+        </div>
+        <div class="image-left-box">
+            <img src="https://static.wixstatic.com/media/e49d68_73f96ace001d43e5b1333df10c8ea8cc~mv2.jpeg/v1/fill/w_560,h_680,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e49d68_73f96ace001d43e5b1333df10c8ea8cc~mv2.jpeg" alt="Description of Image">
+        </div>
+    </section>
+
+    <!-- Floating Chat Button -->
+    <button id="chat-toggle">💬 Chatea con tu asesor</button>
+
+    <!-- Floating Chat Container -->
+    <div id="chat-container">
+        <button id="close-chat">✖</button>
+        <iframe 
+            src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2025/02/25/22/20250225225642-QA51XMES.json" 
+            width="100%" 
+            height="100%" 
+            style="border: none;">
+        </iframe>
+    </div>
+    <section id="comp-kmc3dtwj" class="comp-kmc3dtwj CohWsy wixui-column-strip">
+        <div id="bgLayers_comp-kmc3dtwj" data-hook="bgLayers" data-motion-part="BG_LAYER comp-kmc3dtwj" class="if7Vw2">
+            <div data-testid="colorUnderlay" class="tcElKx i1tH8h"></div>
+            <div id="bgMedia_comp-kmc3dtwj" data-motion-part="BG_MEDIA comp-kmc3dtwj" class="wG8dni"></div>
+        </div>
+        <div data-testid="columns" class="V5AUxf">
+            <div id="comp-kmc3du2o" class="comp-kmc3du2o YzqVVZ wixui-column-strip__column">
+              <div id="bgLayers_comp-kmc3du2o" data-hook="bgLayers" data-motion-part="BG_LAYER comp-kmc3du2o" class="MW5IWV">
+                <div data-testid="colorUnderlay" class="LWbAav Kv1aVt"></div>
+                <div id="bgMedia_comp-kmc3du2o" data-motion-part="BG_MEDIA comp-kmc3du2o" class="VgO9Yg"></div>
+              </div>
+          
+              <div data-mesh-id="comp-kmc3du2oinlineContent" data-testid="inline-content" class="footer-container">
+                <p class="footer-text">
+                  <span>Copyrigth © 2025 Todos los derechos reservados</span>
+                </p>
+                <ul class="social-icons">
+                  <li>
+                    <a href="https://www.linkedin.com/in/oscarhsanchez/" target="_blank">
+                      <img src="https://static.wixstatic.com/media/6ea5b4a88f0b4f91945b40499aa0af00.png" alt="LinkedIn">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/WixEspanol" target="_blank">
+                      <img src="https://static.wixstatic.com/media/0fdef751204647a3bbd7eaa2827ed4f9.png" alt="Facebook">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/oscarsanchez.ia/" target="_blank">
+                      <img src="https://static.wixstatic.com/media/01c3aff52f2a4dffa526d7a9843d46ea.png" alt="Instagram">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>          
+    </section>
+
+    <script src="script/chat.js"></script>
+
+</body>
+</html>
